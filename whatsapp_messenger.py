@@ -14,7 +14,7 @@ def send_msg(event=None, context=None):
 
     for key, value in contact_directory.items():
         msg_from_dir = whatsapp_client.messages.create(
-                body = 'Test from Twilio',
+                body = 'Test from Twilio to {0}'.format(key),
                 from_= 'whatsapp:+1',
                 to='whatsapp:' + value,
 
